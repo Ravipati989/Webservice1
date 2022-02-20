@@ -1,0 +1,13 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: myservice-vs
+spec:
+  hosts:
+  - "myservice.example.com"
+  gateways:
+  - myservice-gateway
+  http:
+  - route:
+      - destination:
+          host: demo-istio
