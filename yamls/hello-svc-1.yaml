@@ -5,18 +5,21 @@ metadata:
   labels:
     name: hello-svc-1
     app: demo-istio
+    version: v1
 spec:
   replicas: 1
   selector:
     matchLabels:
       name: index-web-pod-1
       app: demo-istio
+      version: v1
   template:
     metadata:
       name: index-web-pod-1
       labels:
         name: index-web-pod-1
         app: demo-istio
+        version: v1
     spec:
       containers:
       - name: index-web-container01

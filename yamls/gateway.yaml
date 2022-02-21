@@ -1,7 +1,7 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: myweb-gateway
+  name: myservice-gateway
 spec:
   selector:
     istio: ingressgateway
@@ -11,4 +11,4 @@ spec:
       name: http
       protocol: HTTP
     hosts:
-    - "myweb.example.com"
+    - 34.81.53.32.nip.io

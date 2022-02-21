@@ -4,10 +4,16 @@ metadata:
   name: myservice-vs
 spec:
   hosts:
-  - "myservice.example.com"
+  - 34.81.53.32.nip.io
   gateways:
   - myservice-gateway
   http:
   - route:
       - destination:
           host: demo-istio
+          subset: v1
+        weight: 10
+      - destination:
+          host: demo-istio
+          subset: v2
+        weight: 90 
