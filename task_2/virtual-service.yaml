@@ -1,0 +1,19 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: demo-istio
+spec:
+  hosts:
+  - 34.81.53.32.nip.io
+  gateways:
+  - myservice-gateway
+  http:
+  - route:
+      - destination:
+          host: demo-istio
+          subset: v1
+        weight: 10
+      - destination:
+          host: demo-istio
+          subset: v2
+        weight: 90 
