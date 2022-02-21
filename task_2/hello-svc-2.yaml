@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hello-svc-2
+  namespace: mesh-test
   labels:
     name: hello-svc-2
     app: demo-istio
