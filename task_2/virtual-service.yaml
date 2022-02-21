@@ -11,13 +11,13 @@ spec:
   http:
   - match:
     - headers: 
-      x-svc-version:
-        exact: v1
+        x-svc-version:
+          exact: v1
     route:
     - destination:
         host: demo-istio
         subset: v1
-   - route:
-     - destination:
-         host: demo-istio
-         subset: v2
+  - route:
+    - destination:
+        host: demo-istio
+        subset: v2
