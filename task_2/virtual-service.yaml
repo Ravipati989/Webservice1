@@ -9,12 +9,15 @@ spec:
   gateways:
   - myservice-gateway
   http:
-  - route:
-      - destination:
-          host: demo-istio
-          subset: v1
-        weight: 10
-      - destination:
-          host: demo-istio
-          subset: v2
-        weight: 90 
+  - match:
+    - headers: 
+      x-svc-version:
+        exact: v1
+    route:
+    - destination:
+        host: demo-istio
+        subset: v1
+   - route:
+     - destination:
+         host: demo-istio
+         subset: v2
