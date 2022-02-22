@@ -12,4 +12,4 @@ spec:
       name: http
       protocol: HTTP
     hosts:
-    - 34.81.53.32.nip.io
+    - 35.188.187.188.nip.io
