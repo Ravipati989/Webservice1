@@ -5,7 +5,7 @@ metadata:
   namespace: mesh-test
 spec:
   hosts:
-  - 35.188.187.188.nip.io
+  - 34.121.186.121.nip.io
   gateways:
   - myservice-gateway
   http:
